@@ -29,7 +29,7 @@ Um carrossel que:
 ---
 
 # Deploy [ Acesse ]
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white)]()
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white)](https://cledeocirmarafao.github.io/projeto-dragon/)
 
 
 
