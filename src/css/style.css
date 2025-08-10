@@ -1,0 +1,164 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ddd;
+  height: 100vh;
+}
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner .slider {
+  position: absolute;
+  width: 15rem;
+  height: 20rem;
+  top: 10%;
+  left: calc(50% - 7rem);
+  transform-style: preserve-3d;
+  animation: autoRun 20s linear infinite;
+  z-index: 2;
+}
+
+.banner .slider .item {
+  position: absolute;
+  inset: 0;
+  border: 1px solid #c7c7c7;
+  border-radius: 2%;
+}
+
+.banner .slider .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2%;
+}
+
+@keyframes autoRun {
+  0% {
+    transform: perspective(80rem) rotateX(-20deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(80rem) rotateX(-20deg) rotateY(360deg);
+  }
+}
+
+.item:nth-child(1) {
+  transform: rotateY(0deg) translateZ(30rem);
+}
+
+.item:nth-child(2) {
+  transform: rotateY(36deg) translateZ(30rem);
+}
+
+.item:nth-child(3) {
+  transform: rotateY(72deg) translateZ(30rem);
+}
+
+.item:nth-child(4) {
+  transform: rotateY(108deg) translateZ(30rem);
+}
+
+.item:nth-child(5) {
+  transform: rotateY(144deg) translateZ(30rem);
+}
+
+.item:nth-child(6) {
+  transform: rotateY(180deg) translateZ(30rem);
+}
+
+.item:nth-child(7) {
+  transform: rotateY(216deg) translateZ(30rem);
+}
+
+.item:nth-child(8) {
+  transform: rotateY(252deg) translateZ(30rem);
+}
+
+.item:nth-child(9) {
+  transform: rotateY(288deg) translateZ(30rem);
+}
+
+.item:nth-child(10) {
+  transform: rotateY(324deg) translateZ(30rem);
+}
+
+.banner .content {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  width: min(1366px, 100vw);
+  height: max-content;
+  padding-bottom: 10rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 1;
+}
+
+.banner .content h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16rem;
+  line-height: 1rem;
+  color: #25283b;
+  position: relative;
+}
+
+.banner .content h1::after {
+  position: absolute;
+  inset: 0;
+  content: attr(data-content);
+  z-index: 2;
+  -webkit-text-stroke: 0.2rem #d2d2d2;
+  color: transparent;
+}
+
+.banner .content .author {
+  font-family: "Aberto Sans";
+  text-align: right;
+  max-width: 20rem;
+  gap: 2rem;
+}
+
+.banner .content .author h2 {
+  font-size: 3rem;
+  line-height: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+.banner .content .author p {
+  font-size: 2rem;
+}
+
+.banner .content .model {
+  background: url(../assets/images/background.png) center top no-repeat;
+  width: 100%;
+  height: 80vh;
+  position: absolute;
+  background-size: 40%;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.item:nth-child(1),
+.item:nth-child(2),
+.item:nth-child(3),
+.item:nth-child(4),
+.item:nth-child(5),
+.item:nth-child(6),
+.item:nth-child(7),
+.item:nth-child(8),
+.item:nth-child(9),
+.item:nth-child(10) {
+  box-shadow: 0.5rem 0.5rem 3rem rgba(0, 0, 0, 0.35);
+}
